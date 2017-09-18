@@ -1,5 +1,0 @@
----
-- include: playbooks/catalyst.yml
-- include: playbooks/horizonws.yml
-- include: playbooks/services.yml
-- include: playbooks/run_tests.yml

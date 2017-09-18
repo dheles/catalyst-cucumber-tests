@@ -1,7 +1,0 @@
----
-- name: install prerequisites for the horizon webservice
-  hosts: horizon-ws
-
-  roles:
-  - { role: java,   tags: ['java'], become: true }
-  - { role: jetty,  tags: ['jetty'] }
