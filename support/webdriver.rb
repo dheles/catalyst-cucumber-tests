@@ -2,7 +2,7 @@ require 'selenium-webdriver'
 require 'capybara/cucumber'
 require 'rspec/expectations'
 
-driver = :headless_chrome # :headless_chrome :selenium :selenium_chrome and :selenium_chrome_headless
+driver = :selenium_chrome # :headless_chrome :selenium :selenium_chrome and :selenium_chrome_headless
 
 # NOTE: i'm not sure there's any difference between our :headless_chrome and the provided :selenium_chrome_headless
 if driver == :headless_chrome
