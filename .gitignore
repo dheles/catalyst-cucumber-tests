@@ -15,4 +15,4 @@ roles/*
 vendor/
 
 # ignore dynamic testing vars
-features/support/test_vars.rb
+support/test_vars.rb
