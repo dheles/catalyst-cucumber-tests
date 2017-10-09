@@ -7,7 +7,8 @@ Given(/^I go to Catalyst$/) do
   # @browser ||= Watir::Browser.new
   # @browser.window.maximize
   # @browser.goto ENV['CATALYST_URL']
-  visit ENV['CATALYST_URL']
+  # visit ENV['CATALYST_URL']
+  visit TestingEnvironment.catalyst_url
   #puts "Load Time: #{browser.performance.summary[:response_time]/1000} seconds."
 end
 
