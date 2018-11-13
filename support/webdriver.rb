@@ -2,7 +2,7 @@ require 'selenium-webdriver'
 require 'capybara/cucumber'
 require 'rspec/expectations'
 
-driver = :selenium_chrome # :headless_chrome :selenium :selenium_chrome and :selenium_chrome_headless
+driver = :selenium # :headless_chrome :selenium :selenium_chrome and :selenium_chrome_headless
 
 # NOTE: i'm not sure there's any difference between our :headless_chrome and the provided :selenium_chrome_headless
 if driver == :headless_chrome
@@ -12,6 +12,16 @@ if driver == :headless_chrome
     )
 
     Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
+  end
+end
+
+if driver == :selenium
+  Capybara.register_driver(driver) do |app|
+    capabilities = Selenium::WebDriver::Remote::Capabilities.firefox(
+        accept_insecure_certs: true
+    )
+
+    Capybara::Selenium::Driver.new(app, browser: :firefox, desired_capabilities: capabilities)
   end
 end
 
